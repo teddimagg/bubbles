@@ -1,0 +1,37 @@
+<template name="admin">
+{{#if currentUser}}
+	<form class="insGame">
+		<input type="text" id="name" placeholder="name">
+		<input type="text" id="link" placeholder="link">
+		<input type="text" id="thumb" placeholder="thumbnail">
+		<select id='category'>
+			{{#each cats}}
+			<option data-id="{{_id}}">{{name}}</option>
+			{{/each}}
+		</select>
+		<input type="submit" value="Insert">
+	</form>
+
+	<form class="insCat">
+		<input type="text" id="name" placeholder="name">
+		<input type="submit" value="Insert">
+	</form>
+
+	<ul class="admingames">
+	{{#each games}}
+	<li>
+		<p>{{name}}</p><p class="gamerem" id="{{_id}}">X</p>
+	</li>
+	{{/each}}
+	</ul>
+	<ul class="admincategories">
+	{{#each cats}}
+	<li>
+		<p>{{name}}</p><p class="catrem" id="{{_id}}">X</p>
+	</li>
+	{{/each}}
+	</ul>
+{{else}}
+	{{> login}}
+{{/if}}
+</template>

@@ -1,0 +1,14 @@
+<template name="categories">
+	<div class="categories">
+		<ul>
+			{{#each getCategories}}
+			<a href="/gerd/{{_id}}">
+		    	<li>{{name}}</li>
+		    </a>
+		    {{/each}}
+		    <a href="/allt">
+		    	<li>Allt</li>
+		    </a>
+		</ul>
+	</div>
+</template>

@@ -1,0 +1,25 @@
+<template name="category">
+	<h1 class="catTitle">{{name}}</h1>
+	<ul class="catview">
+		{{#each getGames}}
+		<li class="cattile">
+			<a href="/spila/{{_id}}">
+				<img src="{{thumb}}"/>
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+</template>
+
+<template name="allt">
+	<h1 class="catTitle">Allt</h1>
+	<ul class="catview">
+		{{#each getGames}}
+		<li class="cattile">
+			<a href="/spila/{{_id}}">
+				<img src="{{thumb}}"/>
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+</template>

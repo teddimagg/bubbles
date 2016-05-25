@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css?family=Passion+One);
+$blue: #0191c8;
+$gray: #d6d6d6;
+
+body{padding: 0; margin: 0; background-image: url(http://www.designbolts.com/wp-content/uploads/2012/12/White-Paper-Seamless-Pattern-For-Website-Background.jpg)}
+iframe{background-color: $gray;}
+
+//SHARED LAYOUT
+.container
+{
+	width: 1040px;
+	margin: 20px;	
+	margin: 0 auto;
+	background-color: $gray;
+}
+
+.header
+{
+	width: 100%;
+	height: 105px;
+	background-color: $blue;
+	color: white;
+
+	h1
+	{
+		float: left;
+		font-family: 'Passion One', cursive;
+		padding: 15px 30px;
+		margin: 0;
+		font-size: 50pt;
+		width: 275px;
+		&:hover
+		{
+			cursor: pointer;
+		}
+	}
+
+	.haus //AUGL
+	{	
+		float: right;
+		margin: 10px;
+	}
+}
+
+
+#floating-box-right //AUGL
+{
+	width:150px;
+	height:600px;
+	top: 0px;
+	/*border: 1px dotted #666;*/
+	float:left;
+	margin-right: 30px;
+	margin-top: 10px;
+	margin-left:510px;
+	position:fixed;
+	left: 51%;
+	z-index:1;
+}
+
+.categories
+{
+
+	background: $blue;
+	width: 100%;
+	position: relative;
+	height: 60px;
+
+	ul
+	{
+		padding: 10px;
+		margin: 0;
+		list-style: none;
+
+		li
+		{
+			padding: 10px;
+			margin: 5px 10px 5px 0;
+			border: 1px solid white;
+			float: left;
+			color: white;
+			text-transform: uppercase;
+
+			&:hover
+			{
+				background-color: rgba(255, 255, 255, 0.2);
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.midja //AUGL
+{
+	background: linear-gradient(180deg, $blue 60%, $gray 40%);
+	img
+	{
+		margin: 10px;
+	}
+}
+
+.footer
+{
+	background-color: $blue;
+	height: 200px;
+	color: white;
+	font-family: 'Passion One', cursive;
+	font-size: 20px;
+
+	ul
+	{
+		padding: 20px 0 0 0;
+		margin: 0;
+		text-align: center;
+		list-style: none;
+		float: left;
+		width: 33%;
+		li{padding: 5px;}
+	}
+}
+
+//STATIC hlutir (fyrir neðan gamepanel)
+.smallselection
+{
+	margin: 10px;
+	height: 820px;
+	width: 100%;
+}
+
+.smallzone
+{
+	float: left;
+	height: 400px;
+	margin: 10px;
+	background-color: white;
+
+	img{width: 100%; height:100%}
+}
+
+//Widths of smallzones
+.s1{width: 310px;}
+.s2{width: 340px;}
+
+.bigselection
+{
+	margin: 10px;
+	height: 465px;
+	width: 100%;
+}
+
+.bigzone
+{
+	height: 450px;
+	margin: 10px;
+	background-color: white;
+	float: left;
+
+	img{width: 100%; height:100%}
+}
+
+.s3{width: 635px;}
+.s4{width: 345px;}
+
+//GAME VIEW
+
+//CATEGORY VIEW
+.catTitle
+{
+	font-family: 'Passion One', cursive;
+	font-size: 35px;
+	padding: 0 10px;
+}
+
+.catview
+{
+	width: 100%;
+	padding: 0px;
+	margin: 10px;
+	list-style: none;
+
+	display: flex;
+	flex-flow: row wrap;
+
+	.cattile
+	{
+		background: $blue;
+		padding: 5px;
+		width: calc(20% - 22px);
+		height: 196px;
+		margin-top: 10px;
+		margin-right: 10px;
+
+		line-height: 196px;
+
+		img
+		{
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+//ADMIN STUFF
+.insGame, .insCat
+{
+	width: 100%;
+	margin: 10px;
+
+	input
+	{
+		padding: 15px;
+	}
+}
+
+.admingames, .admincategories
+{
+	width: 40%;
+	display: inline-block;
+	
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li
+	{
+		padding: 10px;
+
+		.catrem, .gamerem
+		{
+			color: red;
+			margin-left: 30px;
+
+			&:hover
+			{
+				cursor: pointer;
+			}
+		}
+	}
+
+	p{display: inline;}
+	
+}
